@@ -28,7 +28,6 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-
 }
 .card{
     display: flex;
@@ -38,13 +37,11 @@ body {
     margin: auto;
     height: 320px;
     width: 650px;
-
     border-radius: 1rem;
 }
 .card-left{
     display: grid;
     justify-content: center;
-    
     width: 40%;
     height:90%;
     margin: 0 auto;
@@ -55,7 +52,6 @@ body {
     border-radius: 100%;
     object-fit: cover;
     margin: 0 auto;
-
 }
 .social-media{
     display: flex;
@@ -70,7 +66,6 @@ body {
     margin: 0.7rem;
 }
 .card-right{
-    
     width: 60%;
     height:90%;
     margin: 0 auto;
@@ -79,7 +74,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-   
 }
 .card-right h2{
     width: 80%;
@@ -93,7 +87,6 @@ body {
 }
 .card-right-bottom h3{
     margin: 1rem 0.5rem;
-
 }
 .card-right-bottom img{
     width: 40px;
@@ -101,9 +94,95 @@ body {
     margin: 0.4rem;
     transition: ease 0.2s all ;
 }
-
 .card-right-bottom img:hover{
     width: 43px;
     height: 43px;
     margin: 0.3rem;
+}
+
+/* RESPONSIVE PART */
+@media screen and (max-width: 768px){
+    .card{
+        width: 90%;
+        height: 100%;
+    }
+    .card-left{
+        width: 40%;
+    }
+    .card-right{
+        padding-top: 1.7rem;
+        width: 55%;
+    }
+    .social-media a{
+        text-decoration: none;
+        color: black;
+        font-size: 1.4rem;
+        margin: 0.7rem;
+    }
+    .card-right .card-right-bottom{
+        
+        padding-left: 1rem ;
+    }
+    .card-right h2{
+        font-size: 0.6rem;
+    }
+    .card-right h2{
+        font-size: 0.5rem;
+    }
+    .card-right-bottom h3{
+        font-size: 0.7rem;
+    }
+    .card-right-bottom img{
+        width: 25px;
+        height: 25px;
+    }
+    .card-right-bottom img:hover{
+        width: 33px;
+        height: 33px;
+    }
+}
+
+/* Extra small devices  */
+
+@media screen and (max-width: 600px){
+    .card{
+        width: 90%;
+        height: 100%;
+    }
+    .card-left{
+        width: 40%;
+    }
+    .card-right{
+
+        padding-top: 1.7rem;
+        width: 55%;
+    }
+    .card-left img{
+        width: 80%;
+        height: 70%;
+        border-radius: 100%;
+        object-fit: cover;
+        margin: 0 auto;
+    }
+    .card-right .card-right-bottom{
+
+        padding-left: 0.8rem ;
+    }
+    .card-right h2{
+        font-size: 0.6rem;
+    }
+    .card-right h2{
+        font-size: 0.5rem;
+    }
+    .card-right-bottom h3{
+        font-size: 0.7rem;
+    }
+    .card-right-bottom img{
+        width: 30px;
+        height: 30px;
+    }
+    .card-right-bottom img:hover{
+        width: 33px;
+        height: 33px;
+    }
 }
