@@ -1,3 +1,7 @@
+:root{
+    --border-color : blue;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -24,17 +28,18 @@ body {
 }
 
 .main{
-    display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
-.card{
+.card , .projets{
     display: flex;
     background-color: white;
     align-items: center;
     justify-content: space-around;
     margin: auto;
+    margin-top: 2rem;
     height: 380px;
     width: 650px;
     border-radius: 1rem;
@@ -81,12 +86,12 @@ body {
     align-items: center;
     justify-content: center;
 }
-.card-right h2{
+.card-right h2 {
     width: 80%;
     margin: 0 auto;
     font-size: 1rem;
     padding:0.6rem 0;
-    border-bottom: 2px solid blue;
+    border-bottom: 2px solid var(--border-color);
 }
 .card-right-bottom{
     margin: 2rem auto;
@@ -105,12 +110,52 @@ body {
     height: 43px;
     margin: 0.3rem;
 }
+.projets{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    overflow: scroll;
+}
 
+.container-left h3{
+    
+    margin: 0 auto;
+}
+.container-right{
+    text-align: justify;
+    width: 90%;
+}
+.container-right h4{
+    border-bottom: var(--border-color) 2px solid;
+    padding: 0.2rem;
+    display: flex;
+    justify-content: center;
+}
+.container-right p{
+    margin: 0.5rem 0;
+}
+.container-left a{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: black;
+}
+.projets img{
+    width: 50%;
+    height: 50%;
+    margin: 0 auto;
+    border: 1px solid black;
+    border-radius: 1rem;
+}
 /* RESPONSIVE PART */
 @media screen and (max-width: 768px){
-    .card{
+    .card ,.projets{
         width: 90%;
         height: 100%;
+    }
+    .projets{
+        height: fit-content;
+        padding: 3rem 0;
     }
     .card-left{
         width: 40%;
@@ -151,9 +196,12 @@ body {
 /* Extra small devices  */
 
 @media screen and (max-width: 600px){
-    .card{
+    .card ,.projets{
         width: 90%;
         height: 100%;
+    }
+    .projets{
+        height: fit-content;
     }
     .card-left{
         width: 40%;
